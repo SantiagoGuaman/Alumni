@@ -1,0 +1,79 @@
+<section>
+    <div class="row g-0">
+        <div class="col-lg-7 d-none d-lg-block">
+            <div class="carousel-item img-1 min-vh-100 active"></div>
+        </div>
+        <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
+            <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 mb-auto w-100">
+                <img src="../../../../assets/imgs/ALumni_Logo_Dark_Large.png" class="img-fluid" />
+            </div>
+            <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4 scroll-register">
+                <h1 class="font-weight-bold mb-4">Crear Cuenta</h1>
+                <form #createPersonForm="ngForm" class="mb-5" (ngSubmit)="create()">
+                    <div class="mb-4">
+                        <label for="InputNombreM" class="form-label font-weight-bold">Nombre Primero</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputNombreM"
+                            [ngModelOptions]="{standalone: true}" placeholder="Ingresa tu primer Nombre"
+                            [(ngModel)]="persona.primer_nombre">
+                    </div>
+                    <div class="mb-4">
+                        <label for="InputNombreP" class="form-label font-weight-bold">Nombre Segundo</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputNombreP"
+                            [ngModelOptions]="{standalone: true}" placeholder="Ingresa tu segundo Nombre"
+                            [(ngModel)]="persona.segundo_nombre">
+                    </div>
+                    <div class="mb-4">
+                        <label for="InputApellidoM" class="form-label font-weight-bold">Apellido Primero</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputApellidoM"
+                            [(ngModel)]="persona.apellido_materno" [ngModelOptions]="{standalone: true}"
+                            placeholder="Ingresa tu primer Apellido">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="InputApellidoP" class="form-label font-weight-bold">Apellido Segundo</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputApellidoP"
+                            [(ngModel)]="persona.apellido_paterno" [ngModelOptions]="{standalone: true}"
+                            placeholder="Ingresa tu segundo Apellidos">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="InputCedula" class="form-label font-weight-bold">Cedula</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputCedula"
+                            [(ngModel)]="persona.cedula" [ngModelOptions]="{standalone: true}"
+                            placeholder="Ingresa tu Cedula">
+                    </div>
+                    <div class="mb-4">
+                        <label for="InputTelefono" class="form-label font-weight-bold">Telefono</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputTelefono"
+                            [(ngModel)]="persona.telefono" [ngModelOptions]="{standalone: true}"
+                            placeholder="Ingresa tu Telefono">
+                    </div>
+                    <div class="mb-4">
+                        <label for="InputFechaNacimiento" class="form-label font-weight-bold">Fecha de
+                            nacimiento</label>
+                        <input type="date" class="form-control bg-dark-x border-0" id="InputFechaNacimiento"
+                            [(ngModel)]="persona.fecha_nacimiento" [ngModelOptions]="{standalone: true}"
+                            placeholder="Ingresa tu fecha de nacimiento">
+                    </div>
+                    <div class="mb-4">
+                        <label for="InputNombreUsuario" class="form-label font-weight-bold">Nombre de Usuario</label>
+                        <input type="text" class="form-control bg-dark-x border-0" id="InputNombreUsuario"
+                            placeholder="Ingresa tu Nombre de usuario" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-4">
+                        <label for="InputPassword" class="form-label font-weight-bold">Contraseña</label>
+                        <input type="password" class="form-control bg-dark-x border-0 mb-2"
+                            placeholder="Ingresa tu contraseña" id="InputPassword1">
+                        <a href="" id="emailHelp" class="form-text text-muted text-decoration-none">¿Has olvidado tu
+                            contraseña?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                </form>
+                <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 mt-auto w-100">
+                    <p class="d-inline-block mb-0">¿Ya tienes una cuenta?</p> <a href=""
+                        class="text-light font-weight-bold text-decoration-none"> Inicia Sesion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
