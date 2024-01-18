@@ -9,16 +9,22 @@
             </div>
             <div class="align-self-center w-100 px-lg-5 py-lg-4 p-4">
                 <h1 class="font-weight-bold mb-4">Bienvenido</h1>
-                <form class="mb-5">
+                <form [formGroup]="loginForm" class="mb-5" (ngSubmit)="login()">
                     <div class="mb-4">
                         <label for="InputNombreU" class="form-label font-weight-bold">Nombre de Usuario</label>
                         <input type="email" class="form-control bg-dark-x border-0" id="InputEmail1"
-                            placeholder="Ingresa tu Nombre de Usuario" aria-describedby="emailHelp">
+                            formControlName="username" placeholder="Ingresa tu Nombre de Usuario">
+                        <div *ngIf="loginForm.get('username')">
+                          El nombre de usuario es obligatorio.
+                        </div>
                     </div>
                     <div class="mb-4">
                         <label for="InputPassword1" class="form-label font-weight-bold">Contraseña</label>
                         <input type="password" class="form-control bg-dark-x border-0 mb-2"
-                            placeholder="Ingresa tu contraseña" id="InputPassword1">
+                            formControlName="password" placeholder="Ingresa tu contraseña">
+                        <div *ngIf="loginForm.get('password')">
+                          La contraseña es obligatoria.
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
                 </form>
