@@ -30,12 +30,12 @@ export class LoginComponent {
           localStorage.setItem('token', token);
 
         
-           this.router.navigate(['/']); // Asegúrate de importar el servicio de enrutamiento si es necesario
+           this.router.navigate(['/']); 
         },
         (error) => {
           // Manejar errores
           console.error('Error en el inicio de sesión', error);
-          // Puedes mostrar un mensaje de error en tu interfaz de usuario si es necesario
+         
         }
       );
     }

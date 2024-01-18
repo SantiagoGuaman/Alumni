@@ -22,7 +22,7 @@
                         <label for="InputPassword1" class="form-label font-weight-bold">Contraseña</label>
                         <input type="password" class="form-control bg-dark-x border-0 mb-2"
                             formControlName="password" placeholder="Ingresa tu contraseña">
-                        <div *ngIf="loginForm.get('password')">
+                        <div *ngIf="loginForm.get('password') re">
                           La contraseña es obligatoria.
                         </div>
                     </div>
